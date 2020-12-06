@@ -10,19 +10,21 @@
 </p>
 <button v-on:click="add">Add</button>
 <button v-on:click="subtract">Subtract</button>
+<button v-on:click="multiply">Multiply</button>
+<button v-on:click="divide">Divide</button>
 <p>
 <label for="result">Result:</label>
-<input name="result" v-model.number="result" readonly
-type="number">
+<input name="result" v-model.number="result" readonly type="number">
 </p>
 </template>
+
 <script>
 export default {
   name: "App" ,
   data () {
     return {
       number1: 0,
-      number2: 0
+      number2: 0,
       result: 0
     }
 },
@@ -32,8 +34,15 @@ methods: {
   },
   subtract () {
     this.result = thisnumber1 - this.number2
+  },
+  multiply () {
+    this.result = thisnumber1 + this.number2
+  },
+  divide () {
+    this.result = thisnumber1 / this.number2
   }
-}
+  }  
+  
 }
 </script>
 
